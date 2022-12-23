@@ -17,11 +17,11 @@ const TaskSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId
     },
     assignee: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         require: true
     },
     reporter: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         require: true
     },
     startTime: {
