@@ -7,7 +7,7 @@ const authController = require('./auth.controller');
 
 router.post('/register', authController.register);
 router.post('/login', authController.login);
-router.get('/seeusers',needAuthenticated, isAdmin, authController.seeUsers);
+router.get('/seeusers',needAuthenticated, authController.seeUsers);
 router.get('/userInfor', authController.getUserInfor);
 
 module.exports = router;

@@ -9,7 +9,7 @@ const createTask = async (req, res) => {
 
         // const senderUser = req.user
 
-        const { title, description, status, assignee, reporter, startTime, endTime, projectID } = req.body;
+        const { title, description, status, assignee, reporter, startTime, endTime, projectID, fileName } = req.body;
 
         const newTask = await TaskModel.create({
             title,
@@ -20,6 +20,7 @@ const createTask = async (req, res) => {
             reporter,
             startTime,
             endTime,
+            fileName
             //   createdBy: existedUser._id,
         });
 
