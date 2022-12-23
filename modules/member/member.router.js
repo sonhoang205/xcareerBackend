@@ -10,11 +10,5 @@ router.get('/projectId/:projectId', memberController.getMembers);
 router.get('/', memberController.getMember);
 router.get('/userId/:userId', memberController.getProjectsMember);
 
-// router.get('/', needAuthenticated, taskController.getTasks);
-// router.put('/:taskId', needAuthenticated, taskController.updateTask);
-// router.put('/updatestatus', needAuthenticated, taskController.updateStatusTask);
-// router.delete('/:taskId', needAuthenticated, taskController.deleteTask);
-// router.delete('/', taskController.deleteAllTask);
-
 
 module.exports = router;

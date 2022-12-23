@@ -82,7 +82,7 @@ const updateFile = async (req, res) => {
         const { taskId, fileName } = req.query;
 
         const updateFileName = await TaskModel.findByIdAndUpdate(taskId, { fileName: fileName }, { new: true })
-        res.send({ success: 1, })
+        res.send({ success: 1, updateFileName })
     } catch (error) {
         res.send({ success: 0, data: null, message: error.message })
     }
@@ -134,7 +134,7 @@ const getAllTask = async (req, res) => {
     try {
         const totalTask = await TaskModel
             .find({}).countDocuments()
-        ;
+            ;
         res.send(
             {
                 success: 1,
@@ -147,4 +147,4 @@ const getAllTask = async (req, res) => {
 
 
 
-module.exports = {getAllTask, createTask, deleteTask, updateTask, getTasks, getTask, updateStatusTask, deleteAllTask, updateFile }
+module.exports = { getAllTask, createTask, deleteTask, updateTask, getTasks, getTask, updateStatusTask, deleteAllTask, updateFile }
