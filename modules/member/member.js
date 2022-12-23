@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const MemberSchema = new mongoose.Schema({
     userId: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         require: true
     },
     projectId: {
